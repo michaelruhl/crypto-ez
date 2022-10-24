@@ -1,6 +1,21 @@
+#Crypto-ez
+
+Simple bitcoin info aggregate
+
+!["screenshot description"](https://github.com/michaelruhl/tweeter/blob/master/docs/desktop-view.png)
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/michaelruhl/crypto-ez/blob/master/docs/crypto-ezpic.jpg).
 
 ## Available Scripts
 
