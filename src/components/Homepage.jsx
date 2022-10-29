@@ -2,23 +2,24 @@ import React from 'react'
 import millify from 'millify'
 import { Typography, Row, Col, Statistic } from 'antd'
 import { Link } from 'react-router-dom'
-
 import { useGetCryptosQuery } from '../services/cryptoApi'
 import {Cryptocurrencies, News} from "../components"
-
+import Loader from './Loader'
 const { Title } = Typography
 
 const Homepage = () => {
-  const {data, isFetching} = useGetCryptosQuery()
+  const {data, isFetching} = useGetCryptosQuery(10)
   const globalStats = data?.data?.stats
-
+  
+  // const axios = require("axios");
   
 
-  if(isFetching) return 'Loading...'
+
+if (isFetching) return <Loader />
 
   return (
     <>
-      <Title level={2} classname="heading"> Global Crypto Stats</Title>
+      <Title level={2} className="heading"> Global Crypto Stats</Title>
       <Row>
         <Col span={12}><Statistic title="Total Cryptocurrencies" value={globalStats.total} /></Col>
         <Col span={12}><Statistic title="Total Exchanges" value={globalStats.totalExchanges} /></Col>
