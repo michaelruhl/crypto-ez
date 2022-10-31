@@ -1,11 +1,11 @@
 
 :root{
   --text-primary:#000;
-  --bgPrimary:#fff;
- --bgSecondary: #F9F9F9;
- --pink: rgb(250, 250, 250);
- --light-blue: #e6f7ff;
- --border: #d9d9d9;
+  --bgPrimary:#000;
+ --bgSecondary: #000;
+ --pink: #000;
+ --light-blue: #000;
+ --border: #000;
 }
 
 * {
