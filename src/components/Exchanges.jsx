@@ -16,8 +16,7 @@ const Exchanges = () => {
   useEffect(() => {
     axios.get("https://api.coinlore.net/api/tickers/?limit=20").then((res) => {
       setDataList(res.data.data);
-      console.log(dataList.length);
-      console.log(isLoading);
+      
 
       setLoading(false);
     });

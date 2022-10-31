@@ -38,8 +38,7 @@ const CryptoDetails = () => {
     { title: 'Circulating Supply', value: `$ ${cryptoDetails?.supply?.circulating && millify(cryptoDetails?.supply?.circulating)}`, icon: <ExclamationCircleOutlined /> },
   ];
 
-  console.log("History",coinHistory)
-  console.log("details",cryptoDetails)
+  
 
   return (
     <Col className="coin-detail-container">
