@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import { Select, Typography, Row, Col, Avatar, Card } from 'antd'
+import { Select, Typography, Row, Col, Avatar, Card, } from 'antd'
+import { QuestionOutlined } from '@ant-design/icons'
 import moment from 'moment'
 import Loader from './Loader'
 
@@ -9,7 +10,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi'
 const { Text, Title } = Typography
 const { Option } = Select
 
-const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg'
+// const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg'
 
 const News = ({simplified}) => {
   const [count, setCount] = useState(6)
@@ -50,14 +51,14 @@ const News = ({simplified}) => {
                     <Title className="news-title" level={4}>
                       {news.name}
                     </Title>
-                    <img src={news?.image?.thumbnail?.contentUrl || demoImage} alt="news" />
+                    {news?.image?.thumbnail?.contentUrl ? <img src={news?.image?.thumbnail?.contentUrl} alt="news" /> : <QuestionOutlined />}
               </div>
               <p>
                 {news.description > 100 ? `${news.description.substring(0,100)}...` : news.description}
               </p>
               <div classname="provider-container">
                 <div>
-                  <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl || demoImage } alt="news" />
+                  {news.provider[0]?.image?.thumbnail?.contentUrl ? <Avatar src={news.provider[0]?.image?.thumbnail?.contentUrl} alt="news" /> : <QuestionOutlined /> }
                   <Text className="provider-name"> {news.provider[0]?.name}</Text>
 
                 </div>

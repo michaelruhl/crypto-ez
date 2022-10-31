@@ -6,6 +6,7 @@ import { Navbar, Exchanges, Homepage, Cryptocurrencies, News, CryptoDetails } fr
 function App() {
   return (
     <div className="app">
+      
       <div className="navbar">
         <Navbar />
       </div>
@@ -28,13 +29,12 @@ function App() {
         </Layout>
       <div className="footer" >
         <Typography.Title level={5} style={{color:"white",textAlign: 'center'}}>
-          Crypto-ez <br />
-          All rights reserved
+          Crypto-ez
         </Typography.Title>
         <Space>
-          <Link to="/"> Home</Link>
-          <Link to="/exchanges"> Exchanges</Link>
-          <Link to="/news">News</Link>
+          <Link style={{color: "black",textDecoration: "none"}}to="/"> Home</Link>
+          <Link style={{color: "black",textDecoration: "none"}}to="/exchanges"> Tickers</Link>
+          <Link style={{color: "black",textDecoration: "none"}}to="/news">News</Link>
         </Space>
 
       </div>

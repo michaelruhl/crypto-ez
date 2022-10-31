@@ -1,6 +1,6 @@
 import { Button, Menu, Typography, Avatar } from 'antd'
 import { Link } from 'react-router-dom'
-import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons'
+import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined, DollarOutlined  } from '@ant-design/icons'
 import { useState, useEffect } from 'react'
 
 import icon from'../images/cryptocurrency.png'
@@ -29,9 +29,10 @@ useEffect(() => {
     return (
         <div className="nav-container">
             <div className="logo-container">
-                <Avatar src={icon} size="large" />
+                {/* <Avatar src={DollarOutlined} size="large" /> */}
+                <DollarOutlined style={{fontSize: '50px'}}/>
                 <Typography.Title level={2} className="logo">
-                    <Link to="/">crypto-ez</Link>
+                    <Link style={{color: "black",textDecoration: "none"}}to="/">crypto-ez</Link>
                 </Typography.Title>
                 <Button className='menu-control-container' onClick={() => setActiveMenu(!activeMenu)}>
                     <MenuOutlined />
@@ -39,18 +40,18 @@ useEffect(() => {
             </div>
             {activeMenu && (
 
-            <Menu theme ="dark">
+            <Menu theme ="light">
                 <Menu.Item icon={<HomeOutlined />}>
-                    <Link to="/">Home</Link>
+                    <Link style={{color: "black",textDecoration: "none"}}to="/">Home</Link>
                 </Menu.Item>
                 <Menu.Item icon={<FundOutlined />}>
-                    <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+                    <Link style={{color: "black",textDecoration: "none"}}to="/cryptocurrencies">Cryptocurrencies</Link>
                 </Menu.Item>
                 <Menu.Item icon={<MoneyCollectOutlined />}>
-                    <Link to="/exchanges">Tickers</Link>
+                    <Link style={{color: "black",textDecoration: "none"}}to="/exchanges">Tickers</Link>
                 </Menu.Item>
                 <Menu.Item icon={<BulbOutlined />}>
-                    <Link to="/news">News</Link>
+                    <Link style={{color: "black",textDecoration: "none"}}to="/news">News</Link>
                 </Menu.Item>
             </Menu>
             )}
