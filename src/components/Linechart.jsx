@@ -19,9 +19,15 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
 
   for (let date of coinTimestamp) {
     date = date * 1000
-    coinTimestamp1.push(new Date(date).toLocaleDateString())
+    coinTimestamp1.push(new Date(date).toLocaleTimeString())
   }
   
+  coinPrice.length = 15
+  coinTimestamp1.length = 15
+
+  coinPrice.reverse()
+  coinTimestamp1.reverse()
+
   const data = {
     labels: coinTimestamp1,
     datasets: [
